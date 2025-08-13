@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="3names.js"></script>
+    <script src="math1.js"></script>
+    <script src="planets.js"></script>
+    <script src="continents.js"></script>
+    <script src="library.js"></script>
+    <script src="redo.js"></script>
+</head>
+<body>
+    <h1>Exercise 5</h1>
+    <div id="msg">
+    </div>
+
+    <h1>Exercise 6</h1>
+    <div id="msg2">
+        
+    </div>
+
+    <h1>Exercise 7</h1>
+    <div id="msg3">
+        
+    </div>
+
+    <script>
+        var who = "Luke Skywalker"
+        var number = 34.7
+        var fact = true
+        console.log(who, number, fact)
+        console.log("-----------------------")
+        console.log(name1,name2,name3)
+        //console.log(badname1,badname2,badname3)
+        console.log("-----------------------")
+        console.log(parseInt(x)+y,x-y,x*y,x/y)
+        console.log("-----------------------")
+        console.log(planets)
+        console.log("-----------------------")
+        console.log(continents)
+        console.log("-----------------------")
+        console.log(book.author)
+
+        document.getElementById("msg").innerHTML = planets;
+        document.getElementById("msg2").innerHTML = continents;
+        for (i in book){
+            document.getElementById("msg3").innerHTML += i+": "+book[i]+", ";
+        }
+        </script>
+</body>
+</html>

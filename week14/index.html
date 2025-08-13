@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Cats</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <header>
+
+        <div class="jumbotron bg-secondary-subtle text-start p-100 m-100">
+            <h1 class="p-10 m-10">THE BIG CATS</h1>
+        </div>
+
+
+    </header>
+    
+    <main>
+        <div class="container w-50">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+    
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="images/c-lion.jpg" alt="Lion" class="d-block w-100">
+                  </div>
+              
+                  <div class="item">
+                    <img src="images/c-tiger.jpg" alt="Tiger" class="d-block w-100">
+                  </div>
+              
+                  <div class="item">
+                    <img src="images/c-leopard.jpg" alt="Leopard" class="d-block w-100">
+                  </div>
+    
+                  <div class="item">
+                    <img src="images/c-jaguar.jpg" alt="Jaguar" class="d-block w-100">
+                  </div>
+                </div>
+              
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+        
+        <h2 class="p-10">Big Cats</h2>
+        <select class="form-control" id="Choose" onchange="location.href=this.value;">
+            <option value="index.html" selected="selected">Home</option>
+            <optgroup label="Big Cats">
+
+                <option value="lions.html" >Lions</option>
+                <option value="tigers.html">Tigers</option>
+                <option value="jaguars.html">Jaguars</option>
+                <option value="leopards.html" >Leopards</option>
+                
+            </optgroup>
+            
+        </select>
+
+        <div class="container-fluid row">
+            <p class="col-lg-4">
+                The term "big cat" is typically used to refer to any of the five living members of the genus Panthera, namely the tiger, lion, jaguar, leopard, and snow leopard. 
+                "Big cat" is also used less precisely to include other large members of the cat family, such as cheetahs. 
+                All cats are members of the Felidae family, sharing similar musculature, cardiovascular systems, skeletal frames, and behaviour. 
+            </p>
+
+            <p class="col-lg-4">
+                Both the cheetah and cougar differ physically from fellow big cats, and to a greater extent, other small cats. 
+                As obligate carnivores, big cats are considered apex predators, topping their food chain without natural predators of their own. 
+                Native ranges include the Americas, Africa, and Asia; the ranges of the leopard and tiger also extend into Europe, specifically in Russia.
+            </p>
+
+            <p class="col-lg-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Labore quidem cupiditate expedita, dolores magni error ex, dignissimos voluptates, est deleniti ducimus et omnis nulla porro aliquid culpa consectetur quod a! 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Cupiditate aliquid, in mollitia saepe nemo atque quaerat dolorem amet suscipit enim sunt animi harum fugit similique. Facilis accusantium maiores maxime fugiat.
+            </p>
+        </div>
+        
+        <footer>&copy;Huxton Chalmers 2025</footer>
+    </main>
+
+
+</body>
+</html>

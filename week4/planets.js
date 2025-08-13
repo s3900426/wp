@@ -1,0 +1,1 @@
+const planets =new  Array("Mercury","Mars","Earth","Jupiter","Saturn","Venus","Uranus","Neptune")
