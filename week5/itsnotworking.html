@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="showMessage">show message</button>
+    <p id="message"></p>
+    <script>
+        function displaymessage() {
+            var greet = new Array(
+                "Hi there",
+                "Howdy",
+                "How do you do",
+                "Hello","Welcome",
+                "How are you?"
+            );
+            var text = greet[Math.floor(Math.random() * greet.length)]
+            document.getElementById("message").innerHTML = text;
+
+        }
+        var btn = document.getElementById("showMessage");
+        btn.addEventListener("click", displaymessage);
+    </script>
+</body>
+</html>
