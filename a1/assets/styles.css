@@ -1,28 +1,77 @@
-
+test{
+  color: #cd4f07#6b5b95#fff5f8#333333;
+}
 /* PREDEFINED */
 body{
-    color: #cd4f07;
-    font-family: Libre Baskerville;
+    background-color: #fff5f8;
+    color: #333333;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
 }
 header{
     background-color: #cd4f07;
+    margin-bottom: 10px;
 }
 footer{
-    margin-top: 20%;
     background-color: #cd4f07;
-    background-image: linear-gradient(to right,#cd4f07,#fff5f8);
+    background-image: linear-gradient(to right,#cd4f07,#f6978e );
     color:#fff5f8 ;
-    height: 64px;
-    
+    height: 128px;
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+footer p{
+  padding-right: 25%;
+  margin-bottom: 0;
+  justify-content: space-around;
+}
+p.skill{
+  color: #cd4f07;
+  font-weight: bold;
+}
+h1, h4{
+  color: #cd4f07;
 }
 h3{
+    color:#fff5f8 ;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.733);
+    background: rgba(0, 0, 0, 0.603);
     height: auto;
-    padding: 50px;
+    padding: 20px;
+}
+button.skill{
+  background-color: #cd4f07;
+  color: #fff5f8;
+}
+/* BOOTSRAP */
+.carousel{
+  padding-bottom: 2%;
+}
+.carousel-item {
+  height: 400px; /* set your desired max height */
+}
+.carousel-item img {
+  max-height: 100%;
+  height: 100%;
+  width: auto; 
+  margin: auto;
+  object-fit: cover;
 }
 
 /* FONTS */
+body{
+  font-family: 'Ysabeau SC', sans-serif;
+}
+h1, h2, h3, h4{
+  font-family: 'Libre Baskerville', serif;
+}
 .libre-baskerville-regular {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
