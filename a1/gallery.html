@@ -17,33 +17,95 @@
 <body>
 
     <header class="container-fluid">
-        <div class="">
+        <div class="row">
             <nav class="navbar navbar-expand-sm navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img src="images/favicon.ico" alt="Icon for SkillSwap" class="justify-center allign-left"></a>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="collapse navbar-collapse col-3" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="skills.html">All Skills</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="add.html">Add Skill</a>
                             </li>
                         </ul>
                     </div>
+                    <form class="d-flex justify-content-end">
+                        <button class="btn btn-light" type="submit">
+                            <span class="material-icons">search</span>
+                        </button>
+                        <input class="form-control me-2" type="text" placeholder="Search Skills...">
+                    </form>
                 </div>
             </nav>
         </div>
     </header>
 
+    <main class="container">
+        <h1>Skills Gallery</h1>
+        <div class="row">
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/1.png" alt="Guitar" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Beginner Guitar Lessons</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/2.png" alt="Fingerstyle" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Intermediate Fingerstyle</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/3.png" alt="Bread Baking" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Artisan Bread Baking</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/4.png" alt="Pastry Making" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>French Pastry Making</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/5.png" alt="Watercolour" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Watercolour Basics</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/6.png" alt="Procreate" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Digital Illustration with Procreate</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/7.png" alt="Vinyasa" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Morning Vinyasa Flow</p>
+            </section>
+            <section class="col-12 col-sm-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/8.png" alt="PHP & MySQL" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Intro to PHP & MySQL</p>
+            </section>
 
+        </div>
 
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img id="modalImage" class="img-fluid" alt="Preview">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/scripts.js"></script>
+    </main>
+    
 
+    <footer class="container-fluid d-flex">
+        <p class="text-end">&copy;2025, SkillSwap, All Rights Reserved.</p>
+    </footer>
+
+    
 </body>
 </html>
