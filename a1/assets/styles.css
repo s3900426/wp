@@ -42,7 +42,6 @@ p.skill{
 }
 h1, h4{
   color: #cd4f07;
-  font-weight: bold;
 }
 h3{
   color:#fff5f8 ;
@@ -54,17 +53,27 @@ h3{
 button.skill{
   background-color: #cd4f07;
   color: #fff5f8;
+  border: #cd4f07;
+  font-weight: bold;
 }
 .gallery{
   max-width: 100%;
+  transition: transform;
+}
+.gallery:hover{
+  transform: translateY(-10px);
 }
 .skillsBanner{
   max-width:100%;
 }
+.skillSection{
+  transition: transform;
+}
 .skillSection:hover {
-  transition: margin-left 3s ease-in;
-  border: #333333;
-  border-radius: ;
+  transform: translateY(-10px);
+}
+span.orangeAsterisk{
+  color: #cd4f07;
 }
 /* BOOTSRAP */
 .carousel{

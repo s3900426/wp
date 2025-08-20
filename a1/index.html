@@ -17,14 +17,17 @@
 </head>
 <body>
     <header class="container-fluid">
-        <div class="col-12">
-            <nav class="navbar navbar-expand-sm navbar-dark">
+        <div class="row">
+            <nav class="navbar navbar-expand-md navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img src="images/favicon.ico" alt="Icon for SkillSwap" class="justify-center allign-left"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                <a class="nav-link active" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="skills.html">All Skills</a>
@@ -36,13 +39,19 @@
                                 <a class="nav-link" href="add.html">Add Skill</a>
                             </li>
                         </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <form class="d-flex justify-content-end">
+                                    <button class="btn btn-light cont" type="submit">
+                                        <span class="material-icons">search</span>
+                                    </button>
+                                    <input class="form-control me-2" type="text" placeholder="Search Skills...">
+                                </form>
+                            </li>
+                        </ul>
+                        
                     </div>
-                    <form class="d-flex justify-content-end">
-                        <button class="btn btn-light border-end-0" type="submit">
-                            <i class="material-icons">search</i>
-                        </button>
-                        <input class="form-control me-2" type="text" placeholder="Search Skills...">
-                    </form>
+                    
                 </div>
             </nav>
         </div>
@@ -96,25 +105,25 @@
 
     <div class="container">
         <div class="row">
-            <section class="col-12 col-sm-6 col-md-3">
+            <section class="skillSection col-12 col-sm-6 col-md-3">
                 <p class="skill">Intro to PHP & MySQL</p>
                 <p>Rate: $55.00/HR</p>
-                <button class="btn text-light rounded-4 skill"> View Details</button>
+                <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
             </section>
-            <section class="col-12 col-sm-6 col-md-3">
+            <section class="skillSection col-12 col-sm-6 col-md-3">
                 <p class="skill">Intermediate Fingestyle</p>
                 <p>Rate: $45.00/HR</p>
-                <button class="btn text-light rounded-4 skill"> View Details</button>
+                <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
             </section> 
-            <section class="col-12 col-sm-6 col-md-3">
+            <section class="skillSection col-12 col-sm-6 col-md-3">
                 <p class="skill">Artisan Bread Baking</p>
                 <p>Rate: $25.00/HR</p>
-                <button class="btn text-light rounded-4 skill"> View Details</button>
+                <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
             </section>
-            <section class="col-12 col-sm-6 col-md-3">
+            <section class="skillSection col-12 col-sm-6 col-md-3">
                 <p class="skill">French Pastry Making</p>
                 <p>Rate: $50.00/HR</p>
-                <button class="btn text-light rounded-4 skill"> View Details</button>
+                <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
             </section>
         </div>
         

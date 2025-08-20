@@ -10,3 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+document.getElementById("skillForm").addEventListener("submit", function(event){
+    const fileInput = document.getElementById('imageUpload');
+    const
+
+    if (!fileInput.files[0].name.match(/\.(jpg|jpeg|png|gif)$/i))
+        alert('not an image');
+
+
+
+}
