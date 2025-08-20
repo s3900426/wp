@@ -61,7 +61,11 @@ button.skill{
 .skillsBanner{
   max-width:100%;
 }
-
+.skillSection:hover {
+  transition: margin-left 3s ease-in;
+  border: #333333;
+  border-radius: ;
+}
 /* BOOTSRAP */
 .carousel{
   padding-bottom: 2%;
