@@ -1,7 +1,10 @@
-test{
+.test{
   color: #cd4f07#6b5b95#fff5f8#333333;
 }
 /* PREDEFINED */
+main{
+  min-height: calc(100vh - 330px);
+}
 body{
   background-color: #fff5f8;
   color: #333333;
@@ -9,6 +12,7 @@ body{
   display: flex;
   flex-direction: column;
   font-size: large;
+  font-family: 'Ysabeau SC', sans-serif;
 }
 header{
   background-color: #cd4f07;
@@ -54,6 +58,9 @@ button.skill{
 .gallery{
   max-width: 100%;
 }
+.skillsBanner{
+  max-width:100%;
+}
 
 /* BOOTSRAP */
 .carousel{
@@ -69,11 +76,7 @@ button.skill{
   margin: auto;
   object-fit: cover;
 }
-
 /* FONTS */
-body{
-  font-family: 'Ysabeau SC', sans-serif;
-}
 h1, h2, h3, h4{
   font-family: 'Libre Baskerville', serif;
 }
