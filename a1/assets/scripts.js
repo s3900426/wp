@@ -10,13 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-document.getElementById("skillForm").addEventListener("submit", function(event){
-    const fileInput = document.getElementById('imageUpload');
-    const
 
-    if (!fileInput.files[0].name.match(/\.(jpg|jpeg|png|gif)$/i))
-        alert('not an image');
+document.getElementById("skillForm").addEventListener("submit", function(event) {
+    const fileInput = document.getElementById('imageUpload').value.trim();
+    const alert = document.getElementById('alert');
+    const correctFile = /\.(webp|jpg|jpeg|png|gif)$/i;
+    alert.innerHTML = "";
 
+    if (!correctFile.test(fileInput)) {
+        alert.innerHTML = "Only image files are allowed(JPG, PNG, GIF, WEBP)";
+        alert.classList.remove("hiddenAlert");
+        document.getElementById("alert").classList.add("shownAlert");
+        event.preventDefault();
+        return;
+        
+    }else{
+        document.getElementById("alert").classList.add("hiddenAlert");
+        document.getElementById("alert").classList.remove("shownAlert");
+        event.preventDefault();
+        return;
+    }
 
-
-}
+});

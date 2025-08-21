@@ -1,6 +1,3 @@
-.test{
-  color: #cd4f07#6b5b95#fff5f8#333333;
-}
 /* PREDEFINED */
 main{
   min-height: calc(100vh - 330px);
@@ -88,6 +85,24 @@ span.orangeAsterisk{
   width: auto; 
   margin: auto;
   object-fit: cover;
+}
+.hiddenAlert{
+  display: none;
+}
+.shownAlert{
+  display: block;
+}
+.sBarB{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.sBarT{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.skillsTableLink{
+  text-decoration: none;
+  color: #6b5b95;
 }
 /* FONTS */
 h1, h2, h3, h4{
