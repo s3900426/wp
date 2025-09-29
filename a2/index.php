@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="images/favicon.ico" alt="Icon for SkillSwap" class="justify-center allign-left"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="skills.html">All Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="add.html">Add Skill</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <form class="d-flex justify-content-end">
+                                    <button class="sBarB btn btn-light" type="submit">
+                                        <span class="material-icons">search</span>
+                                    </button>
+                                    <input class="sBarT form-control me-2" type="text" placeholder="Search Skills...">
+                                </form>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>SkillSwap</h1>
+                <p>Browse the latest skills shared by our community</p>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div id="Main" class="carousel slide" data-bs-ride="carousel">
+                <button class="carousel-control-prev" type="button" data-bs-target="#Main" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#Main" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/skills/1.png" alt="Guitar" class="d-block w-100">
+                        <div class="carousel-caption caption">
+                            <h3>Guitar</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/skills/2.png" alt="Guitar2?" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Guitar2?</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/skills/3.png" alt="Baking" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Baking</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/skills/4.png" alt="Also Baking" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Also Baking</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="skillSection col-12 col-sm-6 col-md-3">
+                    <p class="skill">Intro to PHP & MySQL</p>
+                    <p>Rate: $55.00/HR</p>
+                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
+                </div>
+                <div class="skillSection col-12 col-sm-6 col-md-3">
+                    <p class="skill">Intermediate Fingestyle</p>
+                    <p>Rate: $45.00/HR</p>
+                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
+                </div> 
+                <div class="skillSection col-12 col-sm-6 col-md-3">
+                    <p class="skill">Artisan Bread Baking</p>
+                    <p>Rate: $25.00/HR</p>
+                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
+                </div>
+                <div class="skillSection col-12 col-sm-6 col-md-3">
+                    <p class="skill">French Pastry Making</p>
+                    <p>Rate: $50.00/HR</p>
+                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container-fluid d-flex">
+        <p class="text-end">&copy;2025, SkillSwap, All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
