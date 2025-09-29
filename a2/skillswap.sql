@@ -19,9 +19,11 @@ skill_id     INT AUTO_INCREMENT PRIMARY KEY,
 title        VARCHAR(150)  NOT NULL,
 description  TEXT          NOT NULL,
 category     VARCHAR(50),
-image_path   VARCHAR(255),
+image_path   VARCHAR(255),  
 rate_per_hr  DECIMAL(8,2)  NOT NULL,
 level        ENUM('Beginner','Intermediate','Expert') NOT NULL DEFAULT 'Intermediate',
 created_at   DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
+INSERT into skills (title, description, category, image_path, rate_per_hr, level) VALUES
+(    )

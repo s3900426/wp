@@ -1,0 +1,123 @@
+<?php
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="images/favicon.ico" alt="Icon for SkillSwap" class="justify-center allign-left"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="skills.html">All Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="add.html">Add Skill</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <form class="d-flex justify-content-end">
+                                    <button class="sBarB btn btn-light cont" type="submit">
+                                        <span class="material-icons">search</span>
+                                    </button>
+                                    <input class="sBarT form-control me-2" type="text" placeholder="Search Skills...">
+                                </form>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Skills Gallery</h1>
+        <div class="row">
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/1.png" alt="Guitar" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Beginner Guitar Lessons</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/2.png" alt="Fingerstyle" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Intermediate Fingerstyle</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/3.png" alt="Bread Baking" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Artisan Bread Baking</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/4.png" alt="Pastry Making" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>French Pastry Making</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/5.png" alt="Watercolour" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Watercolour Basics</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/6.png" alt="Procreate" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Digital Illustration with Procreate</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/7.png" alt="Vinyasa" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Morning Vinyasa Flow</p>
+            </div>
+            <div class="col-6 col-md-3 p-2">
+                <img class="img-fluid gallery rounded" src="images/skills/8.png" alt="PHP & MySQL" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <p>Intro to PHP & MySQL</p>
+            </div>
+
+        </div>
+
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img id="modalImage" class="img-fluid" alt="Preview" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/scripts.js"></script>
+    </main>
+    
+
+    <footer class="container-fluid d-flex">
+        <p class="text-end">&copy;2025, SkillSwap, All Rights Reserved.</p>
+    </footer>
+
+    
+</body>
+</html>
