@@ -1,10 +1,10 @@
 <?php
-//Checl what server you're accessing
+//Checks what server you're accessing
 if (strstr($_SERVER['SERVER_NAME'],'localhost')){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "destination";
+    $dbname = "skillswap";
 } else {
     $servernamemachine = "localhost";
     $servernameonline = "talsprddb02.int.its.rmit.edu.au";

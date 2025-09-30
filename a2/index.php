@@ -27,27 +27,27 @@ $records = $conn->query($sql);
                 </button>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/skills/1.png" alt="Guitar" class="d-block w-100">
+                        <img src="assets/images/skills/1.png" alt="Guitar" class="d-block w-100">
                         <div class="carousel-caption caption">
-                            <h3>Guitar</h3>
+                            <h3>Beginner Guitar Lessons</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/skills/2.png" alt="Guitar2?" class="d-block w-100">
+                        <img src="assets/images/skills/2.png" alt="Guitar2?" class="d-block w-100">
                         <div class="carousel-caption">
-                            <h3>Guitar2?</h3>
+                            <h3>Intermediate Fingerstyle</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/skills/3.png" alt="Baking" class="d-block w-100">
+                        <img src="assets/images/skills/3.png" alt="Baking" class="d-block w-100">
                         <div class="carousel-caption">
-                            <h3>Baking</h3>
+                            <h3>Artisan Bread Baking</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/skills/4.png" alt="Also Baking" class="d-block w-100">
+                        <img src="assets/images/skills/4.png" alt="Also Baking" class="d-block w-100">
                         <div class="carousel-caption">
-                            <h3>Also Baking</h3>
+                            <h3>French Pastry Making</h3>-
                         </div>
                     </div>
                 </div>
@@ -60,8 +60,8 @@ $records = $conn->query($sql);
 <?php
 foreach($records as $row){
     echo '<div class="skillSection col-12 col-sm-6 col-md-3">';
-    echo '<p class="skill">{$row["title"]}</p>';
-    echo '<p>Rate: ${$row["rate_per_hr"]}/HR</p>';
+    echo '<p class="skill">'. $row["title"].'</p>';
+    echo '<p>Rate:' . $row["rate_per_hr"].'/HR</p>';
     echo '<button class="btn btn-dark text-light rounded-4 skill"> View Details</button>';
     echo '</div>';
 
