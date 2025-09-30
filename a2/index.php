@@ -1,7 +1,11 @@
 <?php
-include('includes/db_connect.inc')
-include('includes/header.inc')
-include('includes/nav.inc')
+$title = 'SkillSwap';
+include('includes/db_connect.inc');
+include('includes/header.inc');
+include('includes/nav.inc');
+
+$sql = "SELECT title, rate_per_hr FROM skills ORDER BY created_at DESC LIMIT 4";
+$records = $conn->query($sql);
 ?>
 
 
@@ -52,30 +56,21 @@ include('includes/nav.inc')
 
         <div class="container">
             <div class="row">
-                <div class="skillSection col-12 col-sm-6 col-md-3">
-                    <p class="skill">Intro to PHP & MySQL</p>
-                    <p>Rate: $55.00/HR</p>
-                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
-                </div>
-                <div class="skillSection col-12 col-sm-6 col-md-3">
-                    <p class="skill">Intermediate Fingestyle</p>
-                    <p>Rate: $45.00/HR</p>
-                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
-                </div> 
-                <div class="skillSection col-12 col-sm-6 col-md-3">
-                    <p class="skill">Artisan Bread Baking</p>
-                    <p>Rate: $25.00/HR</p>
-                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
-                </div>
-                <div class="skillSection col-12 col-sm-6 col-md-3">
-                    <p class="skill">French Pastry Making</p>
-                    <p>Rate: $50.00/HR</p>
-                    <button class="btn btn-dark text-light rounded-4 skill"> View Details</button>
-                </div>
+
+<?php
+foreach($records as $row){
+    echo '<div class="skillSection col-12 col-sm-6 col-md-3">';
+    echo '<p class="skill">{$row["title"]}</p>';
+    echo '<p>Rate: ${$row["rate_per_hr"]}/HR</p>';
+    echo '<button class="btn btn-dark text-light rounded-4 skill"> View Details</button>';
+    echo '</div>';
+
+}
+?>
             </div>
         </div>
     </main>
 <?php
-include('includes/footer.inc')
+include('includes/footer.inc');
 
 ?>
