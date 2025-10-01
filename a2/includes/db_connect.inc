@@ -1,15 +1,16 @@
 <?php
 //Checks what server you're accessing
 if (strstr($_SERVER['SERVER_NAME'],'localhost')){
+    ini_set('display_errors', 1); 
+    error_reporting(E_ALL);
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "skillswap";
 } else {
-    $servernamemachine = "localhost";
-    $servernameonline = "talsprddb02.int.its.rmit.edu.au";
+    $servername = "talsprddb02.int.its.rmit.edu.au";
     $username = "s3900426";
-    $password = "Blinky90!";
+    include("/home/sl6/S3900426/public_html/.htdb_pass");
     $dbname = "s3900426";
 }
 // Create connection
@@ -19,3 +20,4 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
+<?

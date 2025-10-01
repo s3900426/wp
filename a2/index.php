@@ -4,7 +4,7 @@ include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
 
-$sql = "SELECT title, rate_per_hr FROM skills ORDER BY created_at DESC LIMIT 4";
+$sql = "SELECT title, rate_per_hr FROM skills ORDER BY skill_id ASC LIMIT 4";
 $records = $conn->query($sql);
 ?>
 

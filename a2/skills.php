@@ -1,4 +1,5 @@
 <?php
+$title = "Skills";
 include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
@@ -29,12 +30,12 @@ $records = $conn->query($sql);
 
 <?php
 foreach ($records as $row){
-    echo '<tr>'
-    echo '<td><a href="details.php" class="skillsTableLink">'.$row[title].'</a></td>'
-    echo '<td>'.$row[category].'</td>'
-    echo '<td>'.$row[level].'</td>'
-    echo '<td>'.$row[rate_per_hr].'</td>'
-    echo '</tr>'
+    echo '<tr>';
+    echo '<td><a href="details.php" class="skillsTableLink">'.$row['title'].'</a></td>';
+    echo '<td>'.$row['category'].'</td>';
+    echo '<td>'.$row['level'].'</td>';
+    echo '<td>'.$row['rate_per_hr'].'</td>';
+    echo '</tr>';
 
 }
 ?>

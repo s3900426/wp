@@ -1,9 +1,10 @@
 <?php
+$title = "Gallery";
 include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
 
-$sql = "SELECT title, image_path FROM skills ORDER BY created_at";
+$sql = "SELECT title, image_path FROM skills ORDER BY skill_id";
 $records = $conn->query($sql);
 ?>
 
@@ -13,7 +14,7 @@ $records = $conn->query($sql);
 <?php
 foreach($records as $row){
     echo '<div class="col-6 col-md-3 p-2">';
-    echo '<img class="img-fluid gallery rounded" src="'.$row['image_path'].'" alt="Guitar" data-bs-toggle="modal" data-bs-target="#imageModal">';
+    echo '<img class="img-fluid gallery rounded" src="'.$row['image_path'].'" alt="'.$row['title'].'" data-bs-toggle="modal" data-bs-target="#imageModal">';
     echo '<p>'.$row['title'].'</p>';
     echo '</div>';
 
