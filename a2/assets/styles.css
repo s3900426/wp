@@ -2,6 +2,9 @@
 main{
   min-height: calc(100vh - 330px);
 }
+p.orange{
+  color: #cd4f07;
+}
 body{
   background-color: #fff5f8;
   color: #333333;
@@ -37,7 +40,7 @@ p.skill{
   color: #cd4f07;
   font-weight: bold;
 }
-h1, h4{
+h1, h4, h5, h6{
   color: #cd4f07;
 }
 h3{
@@ -105,7 +108,7 @@ span.orangeAsterisk{
   color: #6b5b95;
 }
 /* FONTS */
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5, h6{
   font-family: 'Libre Baskerville', serif;
 }
 .libre-baskerville-regular {

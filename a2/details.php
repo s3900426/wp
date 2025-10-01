@@ -4,35 +4,37 @@ include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
 
+$skill_id = isset($_GET['skill_id']) ? (int)$_GET['skill_id'] : 0;
 
+$sql = "SELECT * FROM skills WHERE skill_id = $skill_id";
+$record = $conn->query($sql);
+$current_skill = $record->fetch_assoc();
 ?>
     <main class="container">
+
         <div class="row">
-            <h1 class="col-12">Title</h1>
+            <h1 class="col-12"><?php echo $current_skill['title']?></h1>
         </div>
         <div class="row">
             <div class="col-sm-12 col-md-4">
-                <img src="assets/images/skills/2.png" alt="Some picture" id ="" class="d-block w-100 border border-3 rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <img src="<?php echo $current_skill['image_path']?>" alt="Something herer" class="details d-block w-100 border border-5 rounded" data-bs-toggle="modal" data-bs-target="#imageModal">
             </div>
         </div>
-        <div class="row">
-            <div class="d-inline">
-                <h4>Level: </h4>
-            </div>
-            <div class="d-inline">
-                <p>babababab</p>
-            </div>
+        
+        <div class="d-block">
+            <p class="d-inline-flex text-dark"><?php echo $current_skill['description']?></p>
         </div>
-        <div class="row">
-            <div class="d-inline-flex col-6 fit-content">
-                <h4>Level: </h4>
-            </div>
-            <div class="d-inline-flex col-6 fit-content">
-                <p>babababab</p>
-            </div>
+        <div class="d-block">
+            <p class="d-inline-flex orange">Category: </p>
+            <p class="d-inline-flex text-dark"><?php echo $current_skill['category']?></p>
         </div>
-        <div class="fit-content">
-            <h4 class="d-inline-flex">Level: </h4><h4 class="d-inline-flex text-dark">babababab</h4>
+        <div class="d-block">
+            <p class="d-inline-flex orange">Level: </p>
+            <p class="d-inline-flex text-dark"><?php echo $current_skill['level']?></p>
+        </div>
+        <div class="d-block">
+            <p class="d-inline-flex orange">Rate: </p>
+            <p class="d-inline-flex text-dark"><?php echo $current_skill['rate_per_hr']?></p>
         </div>
 
         <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">

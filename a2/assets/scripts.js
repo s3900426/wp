@@ -2,8 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const photoGallery = document.querySelectorAll(".gallery");
     const modalImage = document.getElementById("modalImage");
+    const detailsPhoto = document.querySelectorAll(".details");
 
     photoGallery.forEach(img => {
+        img.addEventListener("click", function () {
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+        });
+    });
+    detailsPhoto.forEach(img => {
         img.addEventListener("click", function () {
             modalImage.src = this.src;
             modalImage.alt = this.alt;
