@@ -6,7 +6,7 @@ include('includes/nav.inc');
 
 $sql = "SELECT skill_id, title, category, level, rate_per_hr FROM skills ORDER BY created_at";
 $records = $conn->query($sql);
-$skill_id = isset($get['id'])
+$skill_id = isset($get['skill_id'])
     ?>
 
 <main class="container">
