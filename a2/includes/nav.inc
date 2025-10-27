@@ -15,6 +15,14 @@
                             unset($_SESSION['message']); ?>
                         </div>
                     <?php }?>
+                    <?php if (isset($_SESSION["error"])) { ?>
+                        <div class="alert alert-danger alert-dismissable fade show">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            Failed to log in. 
+                            <?php print $_SESSION['error'];
+                            unset($_SESSION['error']); ?>
+                        </div>
+                    <?php }?>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
