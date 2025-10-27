@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = 'SkillSwap';
 include('includes/db_connect.inc');
 include('includes/header.inc');
@@ -6,6 +7,8 @@ include('includes/nav.inc');
 
 $sql = "SELECT skill_id, title, rate_per_hr,description,image_path FROM skills ORDER BY skill_id ASC LIMIT 4";
 $records = $conn->query($sql);
+$sqlusers = "SELECT user_id, username FROM users";
+$recorduser = $conn->query($sqlusers);
 ?>
 
 
