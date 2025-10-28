@@ -1,0 +1,136 @@
+/* PREDEFINED */
+main{
+  min-height: calc(100vh - 330px);
+}
+p.orange{
+  color: #cd4f07;
+}
+h2.orange{
+  color: #cd4f07;
+}
+img.brand{
+  width: 10000px;
+}
+body{
+  background-color: #fff5f8;
+  color: #333333;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  font-family: 'Ysabeau SC', sans-serif;
+}
+header{
+  background-color: #cd4f07;
+  margin-bottom: 10px;
+}
+footer{
+  background-color: #cd4f07;
+  background-image: linear-gradient(to right,#cd4f07,#f6978e );
+  color:#fff5f8 ;
+  height: 128px;
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+footer p.right{
+  padding-right: 10%;
+  margin-bottom: 0;
+  justify-content: space-around;
+}
+p.skill{
+  color: #cd4f07;
+  font-weight: bold;
+}
+h1, h4, h5, h6{
+  color: #cd4f07;
+}
+h3{
+  color:#fff5f8 ;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.603);
+  height: auto;
+  padding: 20px;
+}
+button.skill{
+  background-color: #cd4f07;
+  color: #fff5f8;
+  border: #cd4f07;
+  font-weight: bold;
+}
+.gallery{
+  max-width: 100%;
+  transition: transform;
+}
+.gallery:hover{
+  transform: translateY(-10px);
+}
+.skillsBanner{
+  max-width:100%;
+}
+.skillSection{
+  transition: transform;
+}
+.skillSection:hover {
+  transform: translateY(-10px);
+}
+span.orangeAsterisk{
+  color: #cd4f07;
+}
+/* BOOTSRAP */
+.carousel{
+  padding-bottom: 2%;
+}
+.carousel-item {
+  height: 400px;
+}
+.carousel-item img {
+  max-height: 100%;
+  height: 100%;
+  width: auto; 
+  margin: auto;
+  object-fit: cover;
+}
+.hiddenAlert{
+  display: none;
+}
+.shownAlert{
+  display: block;
+}
+.sBarB{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.sBarT{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.skillsTableLink{
+  text-decoration: none;
+  color: #6b5b95;
+}
+/* FONTS */
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Libre Baskerville', serif;
+}
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}

@@ -1,9 +1,9 @@
 <?php
+session_start();
 $title = 'Add Skill';
 include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
-session_start();
 ?>
 
 <main class="container col-12">
@@ -25,7 +25,7 @@ session_start();
         </div>
         <div class="mb-3">
             <label for="rate" class="form-label">Rate per Hour ($) <span class="orangeAsterisk">*</span></label>
-            <input class="form-control" type="number" id="rate_per_hr" name="rate_per_hr"
+            <input class="form-control" type="number" step="0.01" min="0" id="rate_per_hr" name="rate_per_hr"
                 placeholder="Enter rate per hour" required>
         </div>
         <div class="mb-3">
@@ -50,4 +50,4 @@ session_start();
 <?php
 include('includes/footer.inc')
 
-    ?>
+?>

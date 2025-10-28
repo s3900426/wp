@@ -1,19 +1,17 @@
 <?php
 $title = "Details";
-$skill_id = isset($_GET['skill_id']) ? (int) $_GET['skill_id'] : 0;
-if ($skill_id == 0) {
-    header('Location: skills.php');
-    exit();
-}
 include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
+
+$skill_id = isset($_GET['skill_id']) ? (int) $_GET['skill_id'] : 0;
+
 $sql = "SELECT * FROM skills WHERE skill_id = $skill_id";
 $record = $conn->query($sql);
 $current_skill = $record->fetch_assoc();
-
 ?>
 <main class="container">
+
     <div class="row">
         <h1 class="col-12"><?php echo $current_skill['title'] ?></h1>
     </div>
@@ -40,7 +38,7 @@ $current_skill = $record->fetch_assoc();
         <p class="d-inline-flex orange">Rate: </p>
         <p class="d-inline-flex text-dark"><?php echo $current_skill['rate_per_hr'] ?></p>
     </div>
-    <button class="btn btn-dark text-light rounded-4 skill" onclick="history.back()"> <a href="skills.php"
+    <button class="btn btn-dark text-light rounded-4 skill"> <a href="skills.php"
             class="link-light link-underline-opacity-0">Back</a></button>
 
     <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">

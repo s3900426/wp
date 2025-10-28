@@ -1,11 +1,15 @@
 <?php
+session_start();
 $title = 'SkillSwap';
 include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
 
-$sql = "SELECT skill_id, title, rate_per_hr FROM skills ORDER BY skill_id ASC LIMIT 4";
-$records = $conn->query($sql);
+$sql = "SELECT skill_id, title, rate_per_hr,description,image_path FROM skills ORDER BY created_at DESC LIMIT 4";
+$stmt = mysqli_prepare($conn, $sql);
+mysqli_stmt_execute($stmt);
+$resultsSkills = mysqli_stmt_get_result($stmt);
+$records = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
 ?>
 
 
@@ -25,31 +29,24 @@ $records = $conn->query($sql);
             <button class="carousel-control-next" type="button" data-bs-target="#Main" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </button>
+
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/skills/1.png" alt="Guitar" class="d-block w-100">
-                    <div class="carousel-caption caption">
-                        <h3>Beginner Guitar Lessons</h3>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/skills/2.png" alt="Guitar2?" class="d-block w-100">
-                    <div class="carousel-caption">
-                        <h3>Intermediate Fingerstyle</h3>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/skills/3.png" alt="Baking" class="d-block w-100">
-                    <div class="carousel-caption">
-                        <h3>Artisan Bread Baking</h3>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/skills/4.png" alt="Also Baking" class="d-block w-100">
-                    <div class="carousel-caption">
-                        <h3>French Pastry Making</h3>-
-                    </div>
-                </div>
+                <?php 
+                $counter = 0;
+                foreach($records as $row){
+                    if ($counter == 0){
+                        echo '<div class="carousel-item active">';
+                        $counter+=1;
+                    } else {
+                        echo '<div class="carousel-item">';
+                    }
+                    echo '<img src="'.$row["image_path"].'" alt="'.$row["description"].'" class="d-block w-100">';
+                    echo '<div class="carousel-caption caption">';
+                    echo '<h3>'.$row["title"].'</h3>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
     </div>
