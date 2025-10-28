@@ -19,6 +19,7 @@ if (mysqli_stmt_execute($stmt)) {
     $_SESSION['username'] = $username;
     $_SESSION['email'] = $email;
     $_SESSION['bio'] = $bio;
+    $_SESSION['message'] = 'Registered new user '.$username.'.';
     header("Location: index.php");
     exit();
 } else{

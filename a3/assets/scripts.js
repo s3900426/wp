@@ -54,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    const deleteConfirm = document.getElementById("")
+    const deleteConfirm = document.getElementById("delete")
     if(deleteConfirm){
         deleteConfirm.addEventListener('onclick', function (event) {
             

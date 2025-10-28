@@ -34,33 +34,35 @@ if ($error === 0 && in_array($type, ['image/jpeg', 'image/png', 'image/webp', 'i
         $sql = "INSERT INTO skills (title, description, category, level, rate_per_hr, image_path, user_id) VALUES (?, ?, ?, ?, ?, ?,?)";
         $stmt = $conn->prepare($sql);
         if (!$stmt) {
-            exit("An error occurred");
+            $_SESSION["error"] = "An error occured while adding to the database.";
+            header("Location: edit.php?skill_id=".$skill_id);
+            exit("");
         }
         $image_path = $image_directory . $updated_filename;
         $stmt->bind_param("ssssdsi",$title,$description, $category, $level, $rate_per_hr, $image_path, $user_id);
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
-            echo '<div class="alert alert-success alert-dismissible">';
-            echo "<p>New record successfully inserted into the database</p>";
-            echo '</div>';
-            echo '<button class="btn btn-dark text-light rounded-4 skill"> <a href="add.php" class="link-light link-underline-opacity-0">Back</a></button>';
+            $_SESSION["message"] = "New record successfully inserted into the database.";
+            header("Location: details.php?skill_id=".$skill_id);
+            exit("");
         } else {
-            echo '<div class="alert alert-danger alert-dismissible">';
-            echo "<p>Image not moved to folder</p>";
-            echo '</div>';
-            echo '<a href="add.php" class="btn btn-dark text-light rounded-4 skill back-btn">Back</a>';
+            $_SESSION["error"] = "Couldn't move file please try again.";
+            header("Location: edit.php?skill_id=".$skill_id);
+            exit("");
         }
 
 
     } else {
-        echo '<div class="alert alert-danger">Failed to move uploaded image.</div>';
-        echo '<button class="btn btn-dark text-light rounded-4 skill" onclick="history.back()"> <a href="add.php" class="link-light link-underline-opacity-0">Back</a></button>';
+        $_SESSION["error"] = "Couldn't move file please try again.";
+        header("Location: edit.php?skill_id=".$skill_id);
+        exit("");
     }
 
 } else {
-    echo "<p class='warning'>Image is not suitable, failed to upload title and image.</p>";
-    echo '<button class="btn btn-dark text-light rounded-4 skill"> <a href="add.php" class="link-light link-underline-opacity-0">Back</a></button>';
+    $_SESSION["error"] = "Image is not suitable, failed to upload title and image.";
+    header("Location: edit.php?skill_id=".$skill_id);
+    exit("");
 }
 
 include('includes/footer.inc');

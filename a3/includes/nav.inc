@@ -2,7 +2,7 @@
     <?php if (isset($_SESSION["message"])) { ?>
         <div class="alert alert-success" id="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        Logged in as <?php echo '' . $_SESSION["username"] . '' ?>
+        Success: <?php echo '' . $_SESSION["message"] . '' ?>
         <?php print $_SESSION['message'];
         unset($_SESSION['message']); ?>
         </div>
@@ -10,8 +10,7 @@
     <?php if (isset($_SESSION["error"])) { ?>
         <div class="alert alert-danger" id="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        Failed to log in.
-        <?php print $_SESSION['error'];
+        Failed: <?php print $_SESSION['error'];
         unset($_SESSION['error']); ?>
         </div>
     <?php } ?>

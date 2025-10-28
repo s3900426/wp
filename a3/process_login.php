@@ -14,12 +14,12 @@ mysqli_stmt_fetch($stmt);
 if($user_id && password_verify($password, $hash)){
     $_SESSION['user_id'] = $user_id;
     $_SESSION['username'] = $username;
-    $_SESSION['message'] = "Login Successful!";
+    $_SESSION['message'] = "Logged in Successfully as: ".$username.'.';
     header('Location: index.php');
     exit();
 }else{
-    $_SESSION['error'] = "Failed to login. Please check username and password";
-    header('Location: index.php');
+    $_SESSION['error'] = "Failed to login. Please check username and password.";
+    header('Location: login.php');
     exit();
 }
 ?>
