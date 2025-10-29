@@ -10,13 +10,13 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $user_id = $_SESSION['user_id'];
-$id = intval($_GET['skill_id']);
+$skill_id = intval($_GET['skill_id']);
 
 $sql = "SELECT * from skills where skill_id = ? AND user_id=?";
 // Prepare the SQL statement
 $stmt = $conn->prepare($sql);
 
-$stmt->bind_param("ii", $id, $user_id);
+$stmt->bind_param("ii", $skill_id, $user_id);
 
 $stmt->execute();
 
@@ -33,11 +33,11 @@ $image = $row['image_path'];
 mysqli_query($conn, "DELETE FROM skills WHERE skill_id = $skill_id AND user_id= $user_id");
 
 // Delete file
-$upload_dir = 'assets/images/';
+$upload_dir = 'assets/images/skills/';
 if ($image && file_exists($upload_dir . $image)) {
     unlink($upload_dir . $image);
 }
 
-$_SESSION['message'] = "Book deleted.";
+$_SESSION['message'] = "Skill deleted.";
 header("Location: index.php");
 exit();

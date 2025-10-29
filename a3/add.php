@@ -1,7 +1,14 @@
 <?php
 session_start();
-$title = 'Add Skill';
+$pageTitle = 'Add Skill';
 include('includes/db_connect.inc');
+
+if (!isset($_SESSION['user_id'])) {
+    $_SESSION['error'] = "Unauthorized access.";
+    header("Location: index.php");
+    exit();
+}
+
 include('includes/header.inc');
 include('includes/nav.inc');
 ?>

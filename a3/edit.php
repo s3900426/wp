@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = 'Edit Skill';
+$pageTitle = 'Edit Skill';
 include('includes/db_connect.inc');
 
 $skill_id = isset($_GET['skill_id']) ? (int) $_GET['skill_id'] : 0;

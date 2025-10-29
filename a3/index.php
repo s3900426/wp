@@ -1,11 +1,16 @@
 <?php
 session_start();
-$title = 'SkillSwap';
+$pageTitle = 'SkillSwap';
 include('includes/db_connect.inc');
 include('includes/header.inc');
 include('includes/nav.inc');
 
 $sql = "SELECT skill_id, title, rate_per_hr,description,image_path FROM skills ORDER BY created_at DESC LIMIT 4";
+
+$sql = "SELECT skills.skill_id, skills.title, skills.description, skills.rate_per_hr, skills.user_id, skills.image_path, users.username
+FROM skills
+LEFT JOIN users ON users.user_id=skills.user_id
+ORDER BY skills.created_at DESC LIMIT 4";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_execute($stmt);
 $resultsSkills = mysqli_stmt_get_result($stmt);
@@ -58,6 +63,7 @@ $records = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
             foreach ($records as $row) {
                 echo '<div class="skillSection col-12 col-sm-6 col-md-3">';
                 echo '<p class="skill">' . $row["title"] . '</p>';
+                echo '<p>Offered by <a href="instructor.php?user_id='.$row["user_id"].'" class="text-decoration-none">' . $row["username"] . '</a></p>';
                 echo '<p>Rate:' . $row["rate_per_hr"] . '/HR</p>';
                 echo '<button class="btn btn-dark text-light rounded-4 skill"> <a href="details.php?skill_id=' . $row['skill_id'] . '" class="link-light link-underline-opacity-0">View Details</a></button>';
                 echo '</div>';

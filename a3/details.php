@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = "Details";
+$pageTitle = "Details";
 $skill_id = isset($_GET['skill_id']) ? (int) $_GET['skill_id'] : 0;
 if ($skill_id == 0) {
     header('Location: skills.php');
@@ -94,11 +94,12 @@ $recordsUsers = mysqli_fetch_assoc($resultsUsers);
                     <h5 class="modal-title">Confirm Deletion</h5>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you want to permanantly delete <?php $recordsSkills['title'] ?>?</p>
+                    <p>Are you sure you want to permanantly delete <?php echo $recordsSkills['title'] ?>?</p>
                 </div>
                 <form action="delete.php" method="post">
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                        <input type="hidden" name="skill_id" value="<?php echo $recordsSkills['skill_id'] ?>">
+                        <button type="submit" id="delete" class="btn btn-danger">Yes, Delete</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </form>

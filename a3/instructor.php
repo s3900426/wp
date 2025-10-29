@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = "Instructor";
+$pageTitle = "Instructors";
 $user_id = isset($_GET['user_id']) ? (int) $_GET['user_id'] : 0;
 if ($user_id == 0) {
     header('Location: skills.php');

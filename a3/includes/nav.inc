@@ -3,15 +3,13 @@
         <div class="alert alert-success" id="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         Success: <?php echo '' . $_SESSION["message"] . '' ?>
-        <?php print $_SESSION['message'];
-        unset($_SESSION['message']); ?>
+        <?php unset($_SESSION['message']); ?>
         </div>
     <?php } ?>
     <?php if (isset($_SESSION["error"])) { ?>
         <div class="alert alert-danger" id="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        Failed: <?php print $_SESSION['error'];
-        unset($_SESSION['error']); ?>
+        Failed: <?php unset($_SESSION['error']); ?>
         </div>
     <?php } ?>
     <header class="container-fluid">

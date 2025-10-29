@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = 'Add Skill';
+$pageTitle = 'Add Skill';
 include('includes/db_connect.inc');
 
 
