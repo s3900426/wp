@@ -61,10 +61,14 @@ $recordsUsers = mysqli_fetch_assoc($resultsUsers);
         <p class="d-inline-flex"><?php echo $recordsUsers['bio'] ?></p>
     </div>
     <div class="d-block">
-        <?php if ($recordsUsers['user_id'] == $_SESSION['user_id']) { ?>
+        <?php if (isset($_SESSION['user_id']) && $recordsUsers['user_id'] == $_SESSION['user_id']) { ?>
             <a href="edit.php?skill_id=<?php echo $skill_id ?>" class="btn btn-warning">Edit Skill</a>
-            <button onclick="" type="button" class="btn btn-danger me-5" data-bs-toggle="modal" data-bs-target="#delModal">Delete
+            <button onclick="" type="button" class="btn btn-danger" data-bs-toggle="modal"
+                data-bs-target="#delModal">Delete
                 Skill</button>
+            <a href="process_delete.php?skill_id=<?php echo $skill_id?>" class="btn btn-dark me-5"><span class="material-symbols-outlined">
+                    skull
+                </span></a>
         <?php } ?>
         <button class="btn btn-dark text-light rounded-4 skill" onclick="history.back()"> <a href="skills.php"
                 class="link-light link-underline-opacity-0">Back</a></button>

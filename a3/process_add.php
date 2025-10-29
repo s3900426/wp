@@ -35,7 +35,7 @@ if ($error === 0 && in_array($type, ['image/jpeg', 'image/png', 'image/webp', 'i
         $stmt = $conn->prepare($sql);
         if (!$stmt) {
             $_SESSION["error"] = "An error occured while adding to the database.";
-            header("Location: edit.php?skill_id=".$skill_id);
+            header("Location: add.php");
             exit("");
         }
         $image_path = $image_directory . $updated_filename;
@@ -44,24 +44,24 @@ if ($error === 0 && in_array($type, ['image/jpeg', 'image/png', 'image/webp', 'i
 
         if ($stmt->affected_rows > 0) {
             $_SESSION["message"] = "New record successfully inserted into the database.";
-            header("Location: details.php?skill_id=".$skill_id);
+            header("Location: gallery.php");;
             exit("");
         } else {
             $_SESSION["error"] = "Couldn't move file please try again.";
-            header("Location: edit.php?skill_id=".$skill_id);
+            header("Location: add.php");;
             exit("");
         }
 
 
     } else {
         $_SESSION["error"] = "Couldn't move file please try again.";
-        header("Location: edit.php?skill_id=".$skill_id);
+        header("Location: add.php");;
         exit("");
     }
 
 } else {
     $_SESSION["error"] = "Image is not suitable, failed to upload title and image.";
-    header("Location: edit.php?skill_id=".$skill_id);
+    header("Location: add.php");;
     exit("");
 }
 

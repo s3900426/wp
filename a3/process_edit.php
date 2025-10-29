@@ -42,7 +42,7 @@ if (isset($_FILES['image']['name']) && $_FILES['image']['name'] !== '') {
     $image_directory = 'assets/images/skills/';
 
     if ($error === 0 && in_array($type, ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/jpg']) && $size < 1000000) {
-
+        unlink($image_path);
         if (move_uploaded_file($temp, $image_directory . $updated_filename)) {
             $image_path = $image_directory . $updated_filename;
 

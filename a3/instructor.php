@@ -30,7 +30,7 @@ $recordsSkills = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
         <p><?php echo $recordsUsers['bio'] ?></p>
     </div>
     <div class="row">
-        <h2 class="d-inline-flex text-dark orange">Skills Offered</h2>
+        <h2 class="d-inline-flex orange">Skills Offered</h2>
         <?php
             foreach ($recordsSkills as $row) {
                     echo '<div class="col-6 col-md-3 p-2 '.$row['category'].' galdiv">';

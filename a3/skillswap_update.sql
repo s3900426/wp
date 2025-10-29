@@ -27,12 +27,12 @@ ON DELETE CASCADE;
 INSERT IGNORE INTO users 
 (user_id, username, email, password, bio)
 VALUES
-(1,"Admin","admin@server.com","$2y$10$7H/qAaAh6jgwH8rXYXvTnu7lDfxsPsM/8eekq4VPMkOZ5IZBy5lwy","This is the admin account with full access"),
-(2,"Alice","Alice@server.com","$2y$10$7H/qAaAh6jgwH8rXYXvTnu7lDfxsPsM/8eekq4VPMkOZ5IZBy5lwy","Hey, my name is Alice and I'm so excited to get you learning.I teach mainly musical classes focusing on stringed instruments such as guitar and bass."),
-(3,"Bob","Bob@server.com","$2y$10$7H/qAaAh6jgwH8rXYXvTnu7lDfxsPsM/8eekq4VPMkOZ5IZBy5lwy","My name is Bob and I am a professional trained chef and baker. If you'd like to learn how to be a better cook and chef I have the lessons for you!"),
-(4,"Carol","Carol@server.com","$2y$10$7H/qAaAh6jgwH8rXYXvTnu7lDfxsPsM/8eekq4VPMkOZ5IZBy5lwy","I'm Carol, a retired primary school art teacher of 30 years. I've come here to offer my skills and interact with the community. My lesson will be very hands on so gte ready to learn."),
-(5,"Dave","Dave@server.com","$2y$10$7H/qAaAh6jgwH8rXYXvTnu7lDfxsPsM/8eekq4VPMkOZ5IZBy5lwy","Dave is the name! I like to do Vinyasa! Will you learn Vinyasa with me! Signup to do Vinyasa with me!"),
-(6,"Eve","Eve@server.com","$2y$10$7H/qAaAh6jgwH8rXYXvTnu7lDfxsPsM/8eekq4VPMkOZ5IZBy5lwy","So you want to learn how to program. Well I'm the best you got. We're gonna be learning so SQL and then so PHP. Thats all i know so can't do much else. Just some basic code.");
+(1,"Admin","admin@server.com","$2y$10$FSGaEn2n/LIlQnvhA8oq/eY8MHYu5Jjs1sj2PhMdVA4vYSH2IM3LG","This is the admin account with full access"),
+(2,"Alice","Alice@server.com","$2y$10$FSGaEn2n/LIlQnvhA8oq/eY8MHYu5Jjs1sj2PhMdVA4vYSH2IM3LG","Hey, my name is Alice and I'm so excited to get you learning.I teach mainly musical classes focusing on stringed instruments such as guitar and bass."),
+(3,"Bob","Bob@server.com","$2y$10$FSGaEn2n/LIlQnvhA8oq/eY8MHYu5Jjs1sj2PhMdVA4vYSH2IM3LG","My name is Bob and I am a professional trained chef and baker. If you'd like to learn how to be a better cook and chef I have the lessons for you!"),
+(4,"Carol","Carol@server.com","$2y$10$FSGaEn2n/LIlQnvhA8oq/eY8MHYu5Jjs1sj2PhMdVA4vYSH2IM3LG","I'm Carol, a retired primary school art teacher of 30 years. I've come here to offer my skills and interact with the community. My lesson will be very hands on so gte ready to learn."),
+(5,"Dave","Dave@server.com","$2y$10$FSGaEn2n/LIlQnvhA8oq/eY8MHYu5Jjs1sj2PhMdVA4vYSH2IM3LG","Dave is the name! I like to do Vinyasa! Will you learn Vinyasa with me! Signup to do Vinyasa with me!"),
+(6,"Eve","Eve@server.com","$2y$10$FSGaEn2n/LIlQnvhA8oq/eY8MHYu5Jjs1sj2PhMdVA4vYSH2IM3LG","So you want to learn how to program. Well I'm the best you got. We're gonna be learning so SQL and then so PHP. Thats all i know so can't do much else. Just some basic code.");
 
 INSERT IGNORE INTO skills 
 (title, description, category, image_path, rate_per_hr, level, user_id)

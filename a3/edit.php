@@ -2,8 +2,7 @@
 session_start();
 $title = 'Edit Skill';
 include('includes/db_connect.inc');
-include('includes/header.inc');
-include('includes/nav.inc');
+
 $skill_id = isset($_GET['skill_id']) ? (int) $_GET['skill_id'] : 0;
 
 $sqlSkills = "SELECT * FROM skills WHERE skill_id = $skill_id";
@@ -16,6 +15,8 @@ if ($recordsSkills["user_id"] != $_SESSION["user_id"]) {
     exit();
 }
 
+include('includes/header.inc');
+include('includes/nav.inc');
 ?>
 
 <main class="container col-12">

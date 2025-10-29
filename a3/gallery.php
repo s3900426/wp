@@ -15,9 +15,7 @@ $sqlCat = "SELECT DISTINCT category FROM skills ORDER BY created_at";
 $stmt = mysqli_prepare($conn, $sqlCat);
 mysqli_stmt_execute($stmt);
 $resultsUsers = mysqli_stmt_get_result($stmt);
-$recordsCat = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
-
-
+$recordsCat = mysqli_fetch_all($resultsUsers, MYSQLI_ASSOC);
 
 ?>
 
@@ -59,9 +57,9 @@ $recordsCat = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
                 </div>
             </div>
         </div>
-        <script src="assets/scripts.js"></script>
+        
 </main>
-
+<script src="assets/scripts.js"></script>
 <?php
 include('includes/footer.inc')
 
