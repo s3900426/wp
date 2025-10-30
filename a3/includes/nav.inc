@@ -60,15 +60,15 @@
                                 </li>
                             <?php } ?>
 
-                            <li class="nav-item ps-5">
-                                <form class="d-flex justify-content-end">
+                        </ul>
+                            <div class="nav-item ps-5">
+                                <form class="d-flex justify-content-end" method="post" action="search.php">
                                     <button class="sBarB btn btn-light" type="submit">
                                         <span class="material-icons">search</span>
                                     </button>
-                                    <input class="sBarT form-control me-2" type="text" placeholder="Search Skills...">
+                                    <input class="sBarT form-control me-2" type="text" name="search" placeholder="Search Skills...">
                                 </form>
-                            </li>
-                        </ul>
+                            </div>
 
                     </div>
 
