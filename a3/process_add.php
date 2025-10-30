@@ -1,8 +1,6 @@
 <?php
 session_start();
-$pageTitle = 'Add Skill';
 include('includes/db_connect.inc');
-
 
 $title = trim($_POST['title']);
 $description = trim($_POST['description']);
@@ -24,8 +22,7 @@ if (!$user_id){
     header('Location: add.php');
 }
 
-include('includes/header.inc');
-include('includes/nav.inc');
+
 
 if ($error === 0 && in_array($type, ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/jpg']) && $size < 1000000) {
 
@@ -44,26 +41,23 @@ if ($error === 0 && in_array($type, ['image/jpeg', 'image/png', 'image/webp', 'i
 
         if ($stmt->affected_rows > 0) {
             $_SESSION["message"] = "New record successfully inserted into the database.";
-            header("Location: gallery.php");;
+            header("Location: gallery.php");
             exit("");
         } else {
             $_SESSION["error"] = "Couldn't move file please try again.";
-            header("Location: add.php");;
+            header("Location: add.php");
             exit("");
         }
 
 
     } else {
         $_SESSION["error"] = "Couldn't move file please try again.";
-        header("Location: add.php");;
+        header("Location: add.php");
         exit("");
     }
 
 } else {
     $_SESSION["error"] = "Image is not suitable, failed to upload title and image.";
-    header("Location: add.php");;
+    header("Location: add.php");
     exit("");
 }
-
-include('includes/footer.inc');
-?>

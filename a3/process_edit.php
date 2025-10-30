@@ -20,16 +20,9 @@ $category = isset($_POST['category']) && trim($_POST['category']) ? trim($_POST[
 $level = isset($_POST['level']) && trim($_POST['level']) ? trim($_POST['level']) : $recordsSkills['level'];
 $rate_per_hr = isset($_POST['rate_per_hr']) && trim($_POST['rate_per_hr']) ? trim($_POST['rate_per_hr']) : $recordsSkills['rate_per_hr'];
 
-
-
-
-
 if (!$user_id) {
     header('Location: add.php');
 }
-
-include('includes/header.inc');
-include('includes/nav.inc');
 if (isset($_FILES['image']['name']) && $_FILES['image']['name'] !== '') {
     $image = $_FILES['image']['name'];
     $temp = $_FILES['image']['tmp_name'];
@@ -78,6 +71,3 @@ if ($stmt->affected_rows > 0) {
     exit("");
 
 }
-
-include('includes/footer.inc');
-?>

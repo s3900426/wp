@@ -22,4 +22,3 @@ if($user_id && password_verify($password, $hash)){
     header('Location: login.php');
     exit();
 }
-?>

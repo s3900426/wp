@@ -2,7 +2,7 @@
 $pageTitle = 'Search';
 include('includes/db_connect.inc');
 
-$search = '%' . strtolower($_POST['search']) . '%';
+$search = isset($_POST['search']) ? '%' . strtolower($_POST['search']) . '%' : '';
 $searchtwo = $_POST['search'];
 if ($search == '') {
     $_SESSION['error'] = 'No search term entered';
@@ -30,12 +30,6 @@ include('includes/header.inc');
 include('includes/nav.inc');
 ?>
 <main class="container col-12">
-    <form class="d-flex justify-content-end" method="post" action="search.php">
-        <button class="sBarB btn btn-light" type="submit">
-            <span class="material-icons">search</span>
-        </button>
-        <input class="sBarT form-control" type="text" name="Search" placeholder="Search Skills...">
-    </form>
     <h1 class="p-10">Searching for: <?php echo $searchtwo ?></h1>
     <div class="row">
         <?php
