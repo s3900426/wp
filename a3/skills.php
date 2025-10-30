@@ -45,14 +45,12 @@ $records = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
                         echo '<td>' . $row['category'] . '</td>';
                         echo '<td>' . $row['level'] . '</td>';
                         echo '<td>' . $row['rate_per_hr'] . '</td>';
-                        echo '<td>' . ($row['username'] ?? 'unknown'). '</td>';
+                        echo '<td><a href="instructor.php?user_id=' . $row['user_id'] . '" id="' . $row['user_id'] . '" class="skillsTableLink">' . ($row['username'] ?? 'unknown') . '</a></td>';
                         echo '</tr>';
 
                     }
                     ?>
-
                 </tbody>
-
             </table>
         </div>
     </div>

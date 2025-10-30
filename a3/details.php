@@ -55,7 +55,7 @@ $recordsUsers = mysqli_fetch_assoc($resultsUsers);
     <hr>
     <div class="d-block">
         <p class="d-inline-flex orange">Instructor: </p>
-        <p class="d-inline-flex orange"><?php echo $recordsUsers['username'] ?></p>
+        <p class="d-inline-flex orange"><a href="instructor.php?user_id=<?php echo $recordsUsers['user_id'] ?>" class="link-blank skillsTableLink"><?php echo $recordsUsers['username'] ?></a></p>
     </div>
     <div class="d-block">
         <p class="d-inline-flex"><?php echo $recordsUsers['bio'] ?></p>

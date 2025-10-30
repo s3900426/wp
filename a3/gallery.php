@@ -11,7 +11,7 @@ mysqli_stmt_execute($stmt);
 $resultsSkills = mysqli_stmt_get_result($stmt);
 $records = mysqli_fetch_all($resultsSkills, MYSQLI_ASSOC);
 
-$sqlCat = "SELECT DISTINCT category FROM skills ORDER BY created_at";
+$sqlCat = "SELECT DISTINCT category FROM skills";
 $stmt = mysqli_prepare($conn, $sqlCat);
 mysqli_stmt_execute($stmt);
 $resultsUsers = mysqli_stmt_get_result($stmt);
